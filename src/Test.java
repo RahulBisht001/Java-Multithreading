@@ -3,16 +3,19 @@
 public class Test {
     public static void main(String[] args) {
 
-//        System.out.println("Multithreading");
+
 //        System.out.println(Thread.currentThread().getName());
 
         World w = new World();
-        World w2 = new World();
 
-        w.start();
+//        w.start();
+
+        Runnable p = new Planet();
+        Thread t1 = new Thread(p);
+        t1.start();
 
 
-        for (int i = 0; i < 10000; ++i) {
+        for (int i = 0; i < 10; ++i) {
             System.out.println("Hello");
         }
 
