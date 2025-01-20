@@ -3,6 +3,7 @@ package Synchronization;
 public class Counter {
     private int count = 0;
 
+    // Making whole method synchronized.
 //    public synchronized void increment() {
 //        count += 1;
 //    }
